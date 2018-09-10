@@ -54,6 +54,9 @@ class Ndnrtc < Formula
       ENV['NDNCPPLIB'] = "#{@ndncppPath}/lib"
       ENV['CPPFLAGS'] = "-g -O2 -DWEBRTC_POSIX -I/usr/local/opt/boost@1.60/include"
       ENV['CXXFLAGS'] = "-g -O2 -DWEBRTC_POSIX"
+      # since we're using boost 1.60 we need to point to it additionally by using boost flags
+      ENV['BOOST_CPPFLAGS'] = "-I/usr/local/opt/boost@1.60/include"
+      ENV['BOOST_LDFLAGS'] = "-L/usr/local/opt/boost@1.60/lib"
       # all these libs and frameworks are needed because we link against static ndn-cpp
       ENV['LDFLAGS'] = "-L/usr/local/opt/boost@1.60/lib -lsqlite3 -framework Security -framework System -framework Cocoa -framework AVFoundation"
 
