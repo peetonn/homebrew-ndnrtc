@@ -4,7 +4,7 @@ class Ndnrtc < Formula
     desc "NDN-RTC Conferencing Library"
     homepage "https://github.com/remap/ndnrtc"
     url "https://github.com/remap/ndnrtc/archive/v3.0.2.tar.gz"
-    sha256 "4ddcde5ff293234c0a0fb7905ee60814b1d8d6b40f7272ff134285402325f350"
+    sha256 "3e96b690b1ecf334682842ea349098941f794472b80977cda26a37a4515b0ccb"
     
     depends_on "cmake" => :build
     depends_on "boost@1.60"
