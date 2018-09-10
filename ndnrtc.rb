@@ -58,7 +58,7 @@ class Ndnrtc < Formula
       ENV['BOOST_CPPFLAGS'] = "-I/usr/local/opt/boost@1.60/include"
       ENV['BOOST_LDFLAGS'] = "-L/usr/local/opt/boost@1.60/lib"
       # all these libs and frameworks are needed because we link against static ndn-cpp
-      ENV['LDFLAGS'] = "-L/usr/local/opt/boost@1.60/lib -lsqlite3 -framework Security -framework System -framework Cocoa -framework AVFoundation"
+      ENV['LDFLAGS'] = "-L/usr/local/opt/boost@1.60/lib -lsqlite3 -framework Security -framework System -framework Cocoa -framework AVFoundation #{@ndncppPath}/lib/libndn-cpp.a"
 
       system "./configure", "--prefix=#{prefix}"
       system "make", "install"
