@@ -64,6 +64,7 @@ class Ndnrtc < Formula
       system "make", "install"
       system "make", "ndnrtc-client"
       bin.install 'ndnrtc-client'
+      bin.install '.libs/ndnrtc-client'
     end
   
     test do
