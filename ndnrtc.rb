@@ -18,7 +18,7 @@ class Ndnrtc < Formula
   
     resource "openfec" do
       url "http://131.179.142.102:8000/openfec-1.4.2-macos.tar.gz"
-      sha256 "3c419d65e4a778b3537b87d3d1d31238045e06fff008438eccb1cfd4fdb10812"
+      sha256 "238db7a08f30cc1ee6a17418f625894bd4bb8adcdda6e3657e9acb3190ddc02a"
     end
   
     resource "ndn-cpp" do
@@ -28,7 +28,7 @@ class Ndnrtc < Formula
   
     resource "webrtc" do
       url "http://131.179.142.102:8000/webrtc-branch59-macOS.tar.gz"
-      sha256 "1d78ec29333725c8897e6d5d8f6ef0ddfdbbc0d7d27e7ed917b0144e18e72042"
+      sha256 "9f6116cb1fe7542460314ec8c8b93fa7424f53da26acaaf5dbac062275710c8d"
     end
   
     def install
