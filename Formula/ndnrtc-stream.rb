@@ -1,4 +1,4 @@
-class ndnrtc_stream < Formula
+class NdnrtcStream < Formula
   include Language::Python::Virtualenv
 
   desc "A python wrapper for ndnrtc-client for quick&easy NDN video streaming"
