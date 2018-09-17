@@ -6,6 +6,7 @@ class NdnrtcStream < Formula
   url "https://github.com/remap/ndnrtc-stream/archive/v0.0.1.tar.gz"
   sha256 "9c3c544bfb95762a7d04ce048f206d4d8b3c9a6d7bc5c6a12b2e0888d766fdaf"
 
+  depends_on "ffmpeg" => ['--with-sdl2', '--with-fontconfig', '--with-freetype']
   depends_on "python@2"
 
   resource "docopt" do
