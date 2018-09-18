@@ -7,7 +7,6 @@ class Ndnrtc < Formula
     sha256 "f10e68f39e4d48793bd014651488aa30479cdc344a45518f055f4e41cdc61ff2"
     
     depends_on "cmake" => :build
-    # depends_on "boost@1.60"
     depends_on "boost"
     depends_on "automake" => :build
     depends_on "libtool" => :build

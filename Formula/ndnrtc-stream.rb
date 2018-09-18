@@ -4,7 +4,7 @@ class NdnrtcStream < Formula
   desc "A python wrapper for ndnrtc-client for quick&easy NDN video streaming"
   homepage "https://github.com/remap/ndnrtc-stream"
   url "https://github.com/remap/ndnrtc-stream/archive/v0.0.1.tar.gz"
-  sha256 "9c3c544bfb95762a7d04ce048f206d4d8b3c9a6d7bc5c6a12b2e0888d766fdaf"
+  sha256 "f8fe32c34b13dd28372432c32aa966bdc4f6351828ee491259bcf0f5b81ad1cc"
 
   depends_on "ffmpeg" => ['with-sdl2', 'with-fontconfig', 'with-freetype']
   depends_on "python@2"
