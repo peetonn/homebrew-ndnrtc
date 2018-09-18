@@ -7,7 +7,8 @@ class Ndnrtc < Formula
     sha256 "f10e68f39e4d48793bd014651488aa30479cdc344a45518f055f4e41cdc61ff2"
     
     depends_on "cmake" => :build
-    depends_on "boost@1.60"
+    # depends_on "boost@1.60"
+    depends_on "boost"
     depends_on "automake" => :build
     depends_on "libtool" => :build
     depends_on "openssl"
@@ -22,8 +23,8 @@ class Ndnrtc < Formula
     end
   
     resource "ndn-cpp" do
-      url "http://131.179.142.102:8000/ndn-cpp-v0.14-macos.tar.gz"
-      sha256 "a651ac761563e709e2e4c2ab6b030a579fee55fdbdd101f0febe616843f12c3a"
+      url "http://131.179.142.102:8000/ndn-cpp-v0.15-macos.tar.gz"
+      sha256 "2b66fa2e4bc96c79081576d2c64ad474fb90728e59bf69820f5c724b44932697"
     end
   
     resource "webrtc" do
@@ -52,13 +53,10 @@ class Ndnrtc < Formula
       ENV['OPENFECDIR'] = @openfecPath
       ENV['NDNCPPDIR'] = "#{@ndncppPath}/include"
       ENV['NDNCPPLIB'] = "#{@ndncppPath}/lib"
-      ENV['CPPFLAGS'] = "-g -O2 -DWEBRTC_POSIX -I/usr/local/opt/boost@1.60/include"
+      ENV['CPPFLAGS'] = "-g -O2 -DWEBRTC_POSIX" # -I/usr/local/opt/boost@1.60/include"
       ENV['CXXFLAGS'] = "-g -O2 -DWEBRTC_POSIX"
-      # since we're using boost 1.60 we need to point to it additionally by using boost flags
-      ENV['BOOST_CPPFLAGS'] = "-I/usr/local/opt/boost@1.60/include"
-      ENV['BOOST_LDFLAGS'] = "-L/usr/local/opt/boost@1.60/lib"
       # all these libs and frameworks are needed because we link against static ndn-cpp
-      ENV['LDFLAGS'] = "-L/usr/local/opt/boost@1.60/lib -lsqlite3 -framework Security -framework System -framework Cocoa -framework AVFoundation #{@ndncppPath}/lib/libndn-cpp.a"
+      ENV['LDFLAGS'] = "-lsqlite3 -framework Security -framework System -framework Cocoa -framework AVFoundation #{@ndncppPath}/lib/libndn-cpp.a"
 
       system "./configure", "--prefix=#{prefix}"
       system "make", "install"
