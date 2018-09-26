@@ -17,17 +17,17 @@ class Ndnrtc < Formula
     depends_on "sqlite3"
   
     resource "openfec" do
-      url "http://131.179.142.102:8000/openfec-1.4.2-macos.tar.gz"
+      url "http://131.179.142.102:8000/openfec-active-macos.tar.gz"
       sha256 "238db7a08f30cc1ee6a17418f625894bd4bb8adcdda6e3657e9acb3190ddc02a"
     end
   
     resource "ndn-cpp" do
-      url "http://131.179.142.102:8000/ndn-cpp-v0.15-macos.tar.gz"
+      url "http://131.179.142.102:8000/ndn-cpp-active-macos.tar.gz"
       sha256 "2b66fa2e4bc96c79081576d2c64ad474fb90728e59bf69820f5c724b44932697"
     end
   
     resource "webrtc" do
-      url "http://131.179.142.102:8000/webrtc-branch59-macOS.tar.gz"
+      url "http://131.179.142.102:8000/webrtc-active-macOS.tar.gz"
       sha256 "9f6116cb1fe7542460314ec8c8b93fa7424f53da26acaaf5dbac062275710c8d"
     end
   
